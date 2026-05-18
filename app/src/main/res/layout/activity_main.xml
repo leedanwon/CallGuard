@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a2e"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="📋" android:textSize="52sp" android:layout_marginTop="24dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="통화기록 보호" android:textSize="22sp"
+            android:textColor="#e2e8f0" android:textStyle="bold" android:layout_marginTop="8dp"/>
+
+        <!-- Status -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/card_bg"
+            android:padding="20dp" android:layout_marginTop="28dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="감지 상태" android:textColor="#a0aec0" android:textSize="12sp"/>
+            <TextView android:id="@+id/tvStatus"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="● 대기 중" android:textColor="#fc8181"
+                android:textSize="16sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+            <TextView android:id="@+id/tvCount"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="저장된 기록: 0건" android:textColor="#a0aec0"
+                android:textSize="12sp" android:layout_marginTop="6dp"/>
+        </LinearLayout>
+
+        <!-- Password -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:background="@drawable/card_bg"
+            android:padding="20dp" android:layout_marginTop="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="비밀번호 설정" android:textColor="#a0aec0" android:textSize="12sp"/>
+            <EditText android:id="@+id/etPw"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:hint="비밀번호" android:inputType="textPassword"
+                android:textColor="#e2e8f0" android:textColorHint="#4a5568"
+                android:background="@drawable/input_bg"
+                android:paddingStart="12dp" android:paddingEnd="12dp"
+                android:layout_marginTop="10dp"/>
+            <EditText android:id="@+id/etPwConfirm"
+                android:layout_width="match_parent" android:layout_height="48dp"
+                android:hint="비밀번호 확인" android:inputType="textPassword"
+                android:textColor="#e2e8f0" android:textColorHint="#4a5568"
+                android:background="@drawable/input_bg"
+                android:paddingStart="12dp" android:paddingEnd="12dp"
+                android:layout_marginTop="8dp"/>
+            <Button android:id="@+id/btnSetPw"
+                android:layout_width="match_parent" android:layout_height="44dp"
+                android:text="설정 저장" android:backgroundTint="#4a90d9"
+                android:textColor="#ffffff" android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <Button android:id="@+id/btnMonitor"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="감지 시작" android:backgroundTint="#48bb78"
+            android:textColor="#ffffff" android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <Button android:id="@+id/btnView"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:text="🔍  기록 조회" android:backgroundTint="#4a90d9"
+            android:textColor="#ffffff" android:textSize="16sp"
+            android:layout_marginTop="8dp" android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>
